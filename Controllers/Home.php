@@ -6,7 +6,7 @@
             parent::__construct();
             
         }
-
+        // Métodos dentro de la vista Home
         public function home()
         {
             $data['pag_id'] = 26;
@@ -14,6 +14,7 @@
             $data['tag_title'] = "Página principal";
             $data['tag_name'] = "Home";
             $data['pag_content'] = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, sed iste? Quasi qui porro quae ratione? Veritatis iste natus rerum molestias mollitia accusantium, dicta architecto illo voluptate iusto laboriosam a.";
+            $data['getbooks'] = $this->model->getBooks();
             $this->views->getView($this,"home",$data);
         }
         public function logout()
@@ -24,8 +25,11 @@
         }
         public function insert()
         {
-            $data = $this->model->setBook("escrito por un tal asjmaksasdonkis","El gen egoisto");
-            print_r($data);
+            $descripcion = $_POST['des'];
+            $titulo = $_POST['tit'];
+            $data = $this->model->setBook($descripcion,$titulo);
+            header('Location:../home');
+
         }
         public function getBook($id)
         {

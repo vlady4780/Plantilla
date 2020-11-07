@@ -1,7 +1,7 @@
 <?php
     require_once("Config/config.php");
 
-    $url = !empty($_GET['url']) ?  $_GET['url'] : 'home/home';
+    $url = !empty($_GET['url']) ?  $_GET['url'] : 'Login/login';
     $arrurl = explode('/',$url);
     $controller = $arrurl[0];
     $method = $arrurl[0];
