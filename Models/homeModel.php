@@ -32,7 +32,7 @@
             $request = $this->update($sql,$arrData);
             return $request;
         }
-        public function DeleteBook($id)
+        public function DeleteBook(int $id)
         {
             $sql = "DELETE FROM biblioteca WHERE id = $id";
             $request = $this->delete($sql);

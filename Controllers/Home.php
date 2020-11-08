@@ -9,30 +9,19 @@
         // Métodos dentro de la vista Home
         public function home()
         {
-            $data['pag_id'] = 26;
-            $data['tag_page'] = "Home";
-            $data['tag_title'] = "Página principal";
-            $data['tag_name'] = "Home";
-            $data['pag_content'] = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, sed iste? Quasi qui porro quae ratione? Veritatis iste natus rerum molestias mollitia accusantium, dicta architecto illo voluptate iusto laboriosam a.";
             $data['getbooks'] = $this->model->getBooks();
             $this->views->getView($this,"home",$data);
             
         }
         public function veditar($id){
             $data = $this->model->getBook($id);
-            $this->views->getView($this,"editar",$data);
         }
 
         public function logout()
         {
             session_start();
             session_destroy();
-            header("Location: ../login");
-        }
-
-        public function veinsertar(){
-            $this->views->getView($this,"crear");
-
+            header('Location:'.BASE_URL);;
         }
 
         public function insert()
@@ -40,7 +29,7 @@
             $descripcion = $_POST['des'];
             $titulo = $_POST['tit'];
             $data = $this->model->setBook($descripcion,$titulo);
-            header('Location: ../Home');  //sdasd
+            header('Location:'.BASE_URL."home");
 
         }
         public function getBook($id)
@@ -57,28 +46,18 @@
         }
         public function Update()
         {
-            $id = $_POST['id'];
-            $tit = $_POST['tit'];
-            $des = $_POST['des'];
+            $id = $_POST['idU'];
+            $tit = $_POST['titU'];
+            $des = $_POST['desU'];
             $data = $this->model->UpdateBook($id,$tit,$des);
-            header('Location: ../Home'); 
+            header('Location:'.BASE_URL."home");
         }
         public function Delete($id)
         {
             $data = $this->model->DeleteBook($id);
-            header('Location: ../Home');  //sdasd
+            header('Location:'.BASE_URL."home");
         }
 
-        public function Search()
-        {
-            $tit = $_POST['tit'];
-            $data = $this->model->SearchBooks($tit);
-            $this->views->getView($this,"search",$data);
-
-        }
-
-
-       
     }
 
 ?>
