@@ -59,6 +59,13 @@
             $result->execute();
             return $result;
         }
+        public function search(string $query)
+        {
+            $this->strquery = $query;
+            $result = $this->conexion->prepare($this->strquery);
+            $result->execute();
+            return $result;
+        }
 
     }
 
