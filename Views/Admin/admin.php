@@ -17,6 +17,17 @@
     <script src="<?= BASE_URL(); ?>Assets/js/bootstrap.min.js"></script>
     <script src="<?= BASE_URL(); ?>Assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="<?= BASE_URL(); ?>Assets/js/main.js"></script>
+    <script>
+       	function muestra_oculta(id){
+			if (document.getElementById){ 
+				var el = document.getElementById(id); 
+				el.style.display = (el.style.display == 'none') ? 'block' : 'none'; 
+			}
+		}
+		window.onload = function(){
+			muestra_oculta('contenido');
+		}
+    </script>
 </head>
 <body>
     <div class="navbar-lateral full-reset">
@@ -90,10 +101,19 @@
                 <img src="<?= BASE_URL(); ?>Assets/img/<?php echo $car['Imagen'] ?>.png">
                 <br>
                 <h4><?php echo $car['Nombre'] ?></h4>
-                
+                <div class="titulo_boton">
+                    <a style='cursor: pointer;' onClick="muestra_oculta('contenido')" title="" class="btn btn-primary boton_mostrar">Ver Contenido</a>
+                </div>
             </div>
             <?php endforeach; ?>
+        </div>
+        <div id="contenido">
+            <p><?php 
+
+                print_r($data);
             
+            ?>
+            </p>
         </div>
 
         <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
@@ -113,7 +133,7 @@
           </div>
         </div>     
 
-        <footer class="footer full-reset">
+        <footer class="footer full-reset ">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">

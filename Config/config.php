@@ -1,6 +1,6 @@
 <?php
 
-    const BASE_URL = "http://localhost/proyectos/Plantilla/";
+    const BASE_URL = "http://localhost/BibliotecaEjemplo/";
 
     const DB_HOST = "localhost";
     const DB_NAME = "prueba";

@@ -15,7 +15,7 @@
         <div class="nav-lateral-divider full-reset"></div>
         <div class="full-reset nav-lateral-list-menu">
             <ul class="list-unstyled">
-                <li><a href="<?= BASE_URL(); ?>Home"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
+                <li><a href="<?= BASE_URL(); ?>Admin"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
                     
                 <li>
                     <div class="dropdown-menu-button"><i class="zmdi zmdi-assignment-o zmdi-hc-fw"></i>&nbsp;&nbsp; Libros y catálogo <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
