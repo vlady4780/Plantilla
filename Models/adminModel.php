@@ -1,6 +1,6 @@
 <?php 
 
-    class homeModel extends Mysql
+    class adminModel extends Mysql
     {
         public function __construct()
         {
@@ -55,6 +55,16 @@
             return $request;
 
         }
+
+        public function getPC(string $carrera)
+        {
+
+            $sql = "SELECT*FROM proyecto WHERE Especialidad='$carrera'";
+            $request = $this->select_all($sql);
+            return $request;
+
+        }
+
     }
 
 

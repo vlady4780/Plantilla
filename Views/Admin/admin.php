@@ -36,18 +36,18 @@
             <div class="nav-lateral-divider full-reset"></div>
             <div class="full-reset nav-lateral-list-menu">
                 <ul class="list-unstyled">
-                    <li><a href="<?= BASE_URL(); ?>Home"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="<?= BASE_URL(); ?>Admin/admin"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
                         
                     <li>
                         <div class="dropdown-menu-button"><i class="zmdi zmdi-assignment-o zmdi-hc-fw"></i>&nbsp;&nbsp; Libros y catálogo <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
                         <ul class="list-unstyled">
-                            <li><a href="<?= BASE_URL(); ?>Home/insertView"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo Proyecto</a></li>
-                            <li><a href="<?= BASE_URL(); ?>Home/listView"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Listado</a></li>
+                            <li><a href="<?= BASE_URL(); ?>Admin/insertView"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo Proyecto</a></li>
+                            <li><a href="<?= BASE_URL(); ?>Admin/listView"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Listado</a></li>
                         </ul>
                     </li>
 
                     <li><a href="advancesettings.html"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i>&nbsp;&nbsp; Configuraciones avanzadas</a></li>
-                    <li><a href="<?= BASE_URL(); ?>Home/logout"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i>&nbsp;&nbsp; Cerrar Sesion</a></li>
+                    <li><a href="<?= BASE_URL(); ?>Admin/logout"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i>&nbsp;&nbsp; Cerrar Sesion</a></li>
                 </ul>
             </div>
         </div>
@@ -59,7 +59,7 @@
                    <img src="<?= BASE_URL(); ?>Assets/img/user01.png" alt="user-picture" class="img-responsive img-circle center-box">
                 </figure>
                 <li style="color:#fff; cursor:default;">
-                    <span class="all-tittles">Student Name</span>
+                    <span class="all-tittles">Admin Name</span>
                 </li>
                 <li  class="tooltips-general exit-system-button" data-href="index.html" data-placement="bottom" title="Salir del sistema">
                     <i class="zmdi zmdi-power"></i>
@@ -89,26 +89,11 @@
             <div class="card">
                 <img src="<?= BASE_URL(); ?>Assets/img/<?php echo $car['Imagen'] ?>.png">
                 <br>
-                <h3><?php echo $car['Nombre'] ?></h3>
+                <h4><?php echo $car['Nombre'] ?></h4>
                 
-                <a href="#"><div class="btncarreras"> Ver Proyectos</div></a>
             </div>
             <?php endforeach; ?>
             
-        </div>
-
-        <div class="container-fluid" id="projects">
-            <div class="row">
-                <div class="cartas">
-                    <div class="card">
-                        <img src="<?= BASE_URL(); ?>Assets/img/<?php echo $car['Imagen'] ?>.png">
-                        <br>
-                        <h5><?php echo $car['Nombre'] ?></h5>
-                        
-                        <a href="#"><div class="btncarreras"> Ver Proyectos</div></a>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
@@ -149,4 +134,14 @@
         </footer>
     </div>
 </body>
+<script>
+
+    function showBody(){
+        var alert = document.getElementById('body-hidden');
+
+        alert.style.display = 'none';
+    }
+
+</script>
+
 </html>

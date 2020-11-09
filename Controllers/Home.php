@@ -3,13 +3,26 @@
     {
         public function __construct()
         {
+            if(!isset($_SESSION)) 
+            { 
+                session_start(); 
+            } 
             parent::__construct();
             
         }
-        // Métodos dentro de la vista Home
+        // Métodos dentro de la vista admin
         public function home()
         {
-            $data['getbooks'] = $this->model->getBooks();
+
+            if(!isset($_SESSION['rol'])){
+                    header('Location:'.BASE_URL);
+            }else{
+                if($_SESSION['rol'] != 2){
+                    header('Location:'.BASE_URL);
+                }
+            }
+
+            $data = $this->model->getCarrers();
             $this->views->getView($this,"home",$data);
             
         }
@@ -19,43 +32,24 @@
 
         public function logout()
         {
-            session_start();
-            session_destroy();
-            header('Location:'.BASE_URL);;
-        }
-
-        public function insert()
-        {
-            $descripcion = $_POST['des'];
-            $titulo = $_POST['tit'];
-            $data = $this->model->setBook($descripcion,$titulo);
-            header('Location:'.BASE_URL."home");
-
-        }
-        public function getBook($id)
-        {
-            $data = $this->model->getBook($id);
     
-        }
-        
-        
-        public function getBooks()
-        {
-            $data = $this->model->getBooks();
-            print_r($data);
-        }
-        public function Update()
-        {
-            $id = $_POST['idU'];
-            $tit = $_POST['titU'];
-            $des = $_POST['desU'];
-            $data = $this->model->UpdateBook($id,$tit,$des);
-            header('Location:'.BASE_URL."home");
-        }
-        public function Delete($id)
-        {
-            $data = $this->model->DeleteBook($id);
-            header('Location:'.BASE_URL."home");
+
+            // Destruir todas las variables de sesión.
+            $_SESSION = array();
+
+            // Si se desea destruir la sesión completamente, borre también la cookie de sesión.
+            // Nota: ¡Esto destruirá la sesión, y no la información de la sesión!
+            if (ini_get("session.use_cookies")) {
+                $params = session_get_cookie_params();
+                setcookie(session_name(), '', time() - 42000,
+                    $params["path"], $params["domain"],
+                    $params["secure"], $params["httponly"]
+                );
+            }
+
+            // Finalmente, destruir la sesión.
+            session_destroy();
+            
         }
 
     }
