@@ -179,7 +179,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="group-material">
-                                    <input name="tit" type="text" class="tooltips-general material-control" placeholder="Escribe aquí el titulo del proyecto" required="" maxlength="20" data-toggle="tooltip" data-placement="top">
+                                    <input name="tit" type="text" class="tooltips-general material-control" placeholder="Escribe aquí el titulo del proyecto" required="" data-toggle="tooltip" data-placement="top">
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label>Titulo</label>
@@ -187,7 +187,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="group-material">
-                                <td><input name="esp" type="text" placeholder="Especialidad" class="tooltips-general material-control" placeholder="Escribe aquí el titulo del proyecto" required="" maxlength="20" data-toggle="tooltip" data-placement="top"></td>
+                                <td><input name="des" type="text" placeholder="Contenido resumido del proyecto" class="tooltips-general material-control" placeholder="Escribe aquí el titulo del proyecto" required="" data-toggle="tooltip" data-placement="top"></td>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label>Descripcion</label>
@@ -195,7 +195,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="group-material">
-                                    <input type="text" name="especialidad" class="tooltips-general material-control" placeholder="Escribe aquí la carrera del estudiante" required="" maxlength="70" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del autor del libro">
+                                    <input type="text" name="esp" class="tooltips-general material-control" placeholder="Escribe aquí la carrera del estudiante" required="" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del autor del libro">
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label>Especialidad</label>
@@ -203,7 +203,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="group-material">
-                                    <input name="aut" type="text" placeholder="Autor" class="tooltips-general material-control" placeholder="Escribe aquí el titulo del proyecto" required="" maxlength="20" data-toggle="tooltip" data-placement="top">
+                                    <input name="aut" type="text" placeholder="Autor" class="tooltips-general material-control" placeholder="Escribe aquí el titulo del proyecto" required="" data-toggle="tooltip" data-placement="top">
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label>Autor</label>
@@ -212,7 +212,7 @@
 
                             <div class="col-xs-12 col-sm-6">
                                 <div class="group-material">
-                                <input name="sed" type="text" placeholder="Sede" class="tooltips-general material-control" placeholder="Escribe aquí el titulo del proyecto" required="" maxlength="20" data-toggle="tooltip" data-placement="top">
+                                <input name="sed" type="text" placeholder="Sede" class="tooltips-general material-control" placeholder="Escribe aquí el titulo del proyecto" required="" data-toggle="tooltip" data-placement="top">
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label>Sede</label>
@@ -221,7 +221,7 @@
 
                             <div class="col-xs-12 col-sm-6">
                                 <div class="group-material">
-                                    <input type="text" name="age" class="tooltips-general material-control" placeholder="Escribe aquí el año donde desarrollo el proyecto" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el país del libro">
+                                    <input type="text" name="age" class="tooltips-general material-control" placeholder="Escribe aquí el año donde desarrollo el proyecto" required="" data-toggle="tooltip" data-placement="top" title="Escribe el país del libro">
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label>Año</label>
@@ -230,7 +230,7 @@
 
                             <div class="col-xs-12 col-sm-6">
                                 <div class="group-material">
-                                    <input type="file" id="archivo" name="archivo" class="tooltips-general material-control"  maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el país del libro">
+                                    <input type="file" id="archivo" name="archivo" class="tooltips-general material-control"  data-toggle="tooltip" data-placement="top" title="Escribe el país del libro">
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label>Proyecto</label>

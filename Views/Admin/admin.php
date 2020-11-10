@@ -107,15 +107,26 @@
             </div>
             <?php endforeach; ?>
         </div>
+       
         <div id="contenido">
-            <p><?php 
-
-                print_r($data);
-            
+            <table class="table-bordered table-responsive">
+            <?php 
+            foreach($request as $book):
             ?>
+                <tr>
+              
+                    <td><?php echo $book['Descripcion'];?></td>
+                    <td><?php echo $book['Titulo'];?></td>
+                    <td><?php echo $book['Autor'];?></td>
+                    <td><?php echo $book['Sede'];?></td>
+                    <td><?php echo $book['Año'];?></td>
+                  
+                </tr>
+                <?php endforeach;?>
+            </table>
             </p>
         </div>
-
+       
         <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">

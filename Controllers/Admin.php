@@ -25,16 +25,10 @@
             }
 
             $data = $this->model->getCarrers();
-
-            if($_POST)
-            {
                
-                    $nombre_carrera = $_POST['carrera'];
-                    $request = $this->model->getPC('a');
-             
-     
-            }
-            $this->views->getView($this,"admin",$data);
+            $request = $this->model->getBooks();
+            
+            $this->views->getView($this,"admin",$data,$request);
             //$this->views->getView($this,"admin",$data,$request);
             
         }
