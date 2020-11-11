@@ -36,6 +36,14 @@
             $data = $result->fetch(PDO::FETCH_ASSOC);
             return $data;
         }
+        public function select_withNumber(string $query)
+        {
+            $this->strquery = $query;
+            $result = $this->conexion->prepare($this->strquery);
+            $result->execute();
+            $data = $result->fetch(PDO::FETCH_NUM);
+            return $data;
+        }
         public function select_all(string $query)
         {
             $this->strquery = $query;

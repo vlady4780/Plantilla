@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Inicio</title>
+    <title>Inicio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?= BASE_URL(); ?>Assets/css/bootstrap.css?1.0">
@@ -13,14 +13,14 @@
     </style>
 </head>
 <body>
-
+ 
     <nav class="navbar navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?= BASE_URL(); ?>Admin/logout">Cerrar Sesión</a>
             <div class="navbar-brand ml-auto" href="#">
                 <div class="row">
                     <div class="col-xs-6 mt-3">
-                        <h5>Student name</h5>
+                        <h5>Admin name</h5>
                     </div>
                     <div class="col-xs-6">
                         <img src="<?= BASE_URL(); ?>Assets/img/Admin.png" width="50" height="50" class="d-inline-block align-top ml-3" alt="" loading="lazy">
@@ -29,6 +29,7 @@
             </div>
         </div>
     </nav>
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 d-flex justify-content-center" >
@@ -134,7 +135,7 @@
 
 		}
 
-		xmlhttp.open("POST","<?= BASE_URL(); ?>Home/getProjects",true);
+		xmlhttp.open("POST","<?= BASE_URL(); ?>Admin/getProjects",true);
 
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");	
 		
